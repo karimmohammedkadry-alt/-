@@ -1,41 +1,20 @@
-# أَثَر — دار الحِرَف اليدوية المعاصرة
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-متجر إلكتروني لعرض المنتجات اليدوية المعاصرة، مبني باستخدام React وTypeScript وVite.
+# Run and deploy your AI Studio app
 
-## التشغيل محليًا
+This contains everything you need to run your app locally.
 
-يتطلب Node.js 20.19+ أو 22.12+.
+View your app in AI Studio: https://ai.studio/apps/e76557a8-d312-4510-9a5e-f799c7d66b49
 
-```bash
-npm install
-npm run dev
-```
+## Run Locally
 
-## فحص المشروع وبناء نسخة النشر
+**Prerequisites:**  Node.js
 
-```bash
-npm run lint
-npm run build
-npm run preview
-```
 
-ملفات النشر النهائية تُنشأ داخل مجلد `dist`.
-
-## النشر على Vercel
-
-1. ارفع محتويات هذا المشروع إلى مستودع GitHub جديد.
-2. من Vercel اختر **Add New → Project** ثم اربط مستودع GitHub.
-3. اترك إعدادات البناء كما هي أو استخدم:
-   - Framework Preset: **Vite**
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-4. اضغط **Deploy**.
-
-ملف `vercel.json` يضبط إعدادات البناء وإعادة توجيه المسارات إلى `index.html` لتجنب أخطاء تحديث الصفحات.
-
-## ملاحظات مهمة
-
-- لا ترفع ملفات `.env` أو مفاتيح API إلى GitHub. أضف أي أسرار لازمة من **Vercel → Project → Settings → Environment Variables**.
-- ملف `.env.example` مجرد نموذج ولا يحتوي على مفتاح حقيقي.
-- السلة والمفضلة والطلبات والتقييمات في النسخة الحالية تُحفظ في `localStorage` على متصفح الزائر؛ لا يوجد في المشروع الحالي خادم خلفي أو قاعدة بيانات مشتركة لمعالجة الطلبات.
-- لم يتم تضمين `node_modules` أو ملفات البناء في المستودع؛ Vercel يثبت الاعتماديات ويبني المشروع تلقائيًا.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
